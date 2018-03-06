@@ -14,3 +14,15 @@
  * Altres comentaris o incidencies:
  */
 
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct{
+    
+    struct node* seguent;
+    char* moviment;
+    
+}node;
+
+node* primer = NULL;
+node* ultim = NULL;
