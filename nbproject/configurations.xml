@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="95">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -13,7 +13,6 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>src/args.c</itemPath>
-      <itemPath>../../../Desktop/hanoi/hanoi-basic.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -31,11 +30,6 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="../../../Desktop/hanoi/hanoi-basic.c"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
       <item path="src/args.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
@@ -59,11 +53,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="../../../Desktop/hanoi/hanoi-basic.c"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
       <item path="src/args.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
