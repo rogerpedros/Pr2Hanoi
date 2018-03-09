@@ -21,7 +21,7 @@
 void agregar_moviment(node* _node) {
 
     _node->seguent = NULL;
-    
+
     if (primer == NULL) {
         primer = _node;
         ultim = _node;
@@ -34,19 +34,19 @@ void agregar_moviment(node* _node) {
 
 int mostrar_moviment() {
 
-    
-    int i;
-    for(i=0; i<MOVIMENTS; i++){
+
+    int j;
+    for (j = 0; j < 7; j++) {
         node* Elemento_lista = malloc(sizeof (node));
-        Elemento_lista->moviment = "%d Moviment";
-        
+        Elemento_lista->moviment = "Moviment %d:\n";
+
         agregar_moviment(Elemento_lista);
     }
-        node* i;
-        
-        while(i != NULL){
-            printf("%s\n", i->moviment);
-            i = i->seguent;
-        }
-    
+    node* i;
+
+    while (i != NULL) {
+        printf("%s\n", i->moviment);
+        i = i->seguent;
+    }
+
 }
