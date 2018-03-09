@@ -18,6 +18,12 @@
 #include <string.h>
 #include "hanoi_list.h"
 
+int demanar_moviment(int move){
+    
+    printf("Introdueix el moviment que vols visualitzar;\n");
+    scanf("%d", &move);
+}
+
 
 
 void move(int towerorg, int towerdest){

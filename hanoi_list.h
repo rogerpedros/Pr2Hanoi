@@ -13,20 +13,32 @@
  * Estat de l'entrega: 
  * Altres comentaris o incidencies:
  */
+#ifndef HANOI_LIST__
+#define HANOI_LIST__
 
 #include <stdio.h>
 #include <stdlib.h>
+
 
 #define NUMERO_DISCOS    3 // Number of discs to consider
 #define NUMERO_TORRES   3 // Number of towers 
 #define MOVIMENTS  7 //2^n - 1 on n es el nombre de discs
 
+
+/*typedef struct {
+    struct node* seguent; //Apunta al proxim element
+    int num_moviment;
+    char moviment;
+
+} node; */
+
 typedef struct{
     
-    struct node* seguent;
-    char* moviment;
-    
+  int num_moviments;
+  struct node *seguent;
+  
 }node;
 
-node* primer = NULL;
-node* ultim = NULL;
+
+#endif HANOI_LIST__
+
