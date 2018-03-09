@@ -4,7 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>hanoi.h</itemPath>
       <itemPath>hanoi_list.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -38,8 +37,6 @@
       <compileType>
       </compileType>
       <item path="discos.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="hanoi.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hanoi_basico.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -75,8 +72,6 @@
         </asmTool>
       </compileType>
       <item path="discos.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="hanoi.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hanoi_basico.c" ex="false" tool="0" flavor2="0">
       </item>

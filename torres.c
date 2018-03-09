@@ -15,7 +15,7 @@
  */
 #include <stdio.h>
 #include <string.h>
-#include "hanoi.h"
+#include "hanoi_list.h"
 
 int init_torres(int matriu[NUMERO_DISCOS][NUMERO_TORRES]) { //Initcialitza un matriu de les torres totes en 0
 

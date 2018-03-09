@@ -16,7 +16,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "hanoi.h"
+#include "hanoi_list.h"
 
 
 
