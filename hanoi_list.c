@@ -36,7 +36,7 @@ int mostrar_moviment() {
 
 
     int j;
-    for (j = 0; j < 7; j++) {
+    for (j = 0; j < MOVIMENTS; j++) {
         node* Elemento_lista = malloc(sizeof (node));
         Elemento_lista->moviment = "Moviment %d:\n";
 
