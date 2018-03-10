@@ -31,8 +31,15 @@ void hanoi(int nd, int towerorg, int towerdest, int toweraux){
     }                                                     
 }
 
-int main(){    
-    
+int main(int argc, char**argv) {
+    int i;
+
+    // Prints arguments
+    printf("Arguments:\n");
+    for (i = 0; i < argc; i++) {
+        printf("%i: %s\n", i, argv[i]);
+    }
+
     int nd = NUMERO_DISCOS;
     
     hanoi(nd, 0, 1, 2);
