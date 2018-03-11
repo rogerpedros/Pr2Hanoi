@@ -38,7 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/discos.o \
 	${OBJECTDIR}/hanoi_basico.o \
 	${OBJECTDIR}/hanoi_list.o \
-	${OBJECTDIR}/liist_operations.o \
+	${OBJECTDIR}/list_operations.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/moviments.o \
 	${OBJECTDIR}/torres.o
@@ -83,10 +83,10 @@ ${OBJECTDIR}/hanoi_list.o: hanoi_list.c
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/hanoi_list.o hanoi_list.c
 
-${OBJECTDIR}/liist_operations.o: liist_operations.c
+${OBJECTDIR}/list_operations.o: list_operations.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/liist_operations.o liist_operations.c
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/list_operations.o list_operations.c
 
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}

@@ -60,7 +60,7 @@ int addlist(slist *list, sinfo info, snode *after) {
         return (node);
     } // searchorderlist
 
-    int searchnodelist(slist *list, sinfo info, snode **nod) {
+int searchnodelist(slist *list, sinfo info, snode **nod) {
         int ret = FAIL;
         snode *node = *nod;
 
@@ -81,7 +81,7 @@ int addlist(slist *list, sinfo info, snode *after) {
         return (ret);
     } // searchnodelist
 
-    int encapsulateinfo(sinfo info, snode **nod) {
+int encapsulateinfo(sinfo info, snode **nod) {
         int ret = SUCCES;
         snode *node = *nod;
 
@@ -102,7 +102,7 @@ int addlist(slist *list, sinfo info, snode *after) {
     // It returns the result of the operation SUCCES when it has it done
     // it or FAIL if it was not possible to do it
 
-    int decapsulateinfo(sinfo *info, snode * node) {
+int decapsulateinfo(sinfo *info, snode * node) {
         int ret = SUCCES;
 
         if (node == NULL)
