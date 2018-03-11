@@ -35,10 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/List_operations.o \
 	${OBJECTDIR}/discos.o \
 	${OBJECTDIR}/hanoi_basico.o \
 	${OBJECTDIR}/hanoi_list.o \
+	${OBJECTDIR}/liist_operations.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/moviments.o \
 	${OBJECTDIR}/torres.o
@@ -68,11 +68,6 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pr2hanoi.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pr2hanoi ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/List_operations.o: List_operations.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/List_operations.o List_operations.c
-
 ${OBJECTDIR}/discos.o: discos.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -87,6 +82,11 @@ ${OBJECTDIR}/hanoi_list.o: hanoi_list.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/hanoi_list.o hanoi_list.c
+
+${OBJECTDIR}/liist_operations.o: liist_operations.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/liist_operations.o liist_operations.c
 
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}

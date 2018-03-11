@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "llistes.h"
+
 sinfo get_element(sinfo *v, int i) {
     sinfo info;
 
