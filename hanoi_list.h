@@ -19,7 +19,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 #define NUMERO_DISCOS    3 // Number of discs to consider
 #define NUMERO_TORRES   3 // Number of towers
 #define MOVIMENTS  7    //2^n - 1 on n es el nombre de discs
@@ -36,8 +35,8 @@ typedef struct {
     int  move;   // any fields we need to have
     int  recProf;
     int  disc;
-    char from;
-    char to;
+    int  from;
+    int  to;
 } sinfo;
 
 struct tnode{
@@ -45,13 +44,17 @@ struct tnode{
     struct tnode *next; // link to the next element of the list (single & double linked)
     struct tnode *prev; // link to the previous element of the list (double linked only)
 };
-
 typedef struct tnode snode;
+
+
+#if 0
 typedef struct{
     sinfo  info; // the information to store in the list
     snode *next; // link to the next element of the list (single & double linked)
     snode *prev; // link to the previous element of the list (double linked only)
 }snode;
+
+#endif
 
 typedef struct{
     snode *first;  // access to the first element of the list

@@ -23,25 +23,12 @@
 #include "moviments.c"
 
 
-
 // Recursive function to move nd disks from the origin tower towerorg, to 
 // destination tower towerdest, using toweraux as auxiliary tower.
 // it doesn't return anything and instead it prints information of the move of 
 // the disks to display
-
-void hanoi(int nd, int towerorg, int towerdest, int toweraux){
-    
-    if (nd == 1){
-        move(towerorg, towerdest);
-        
-    }
-    else{
-        hanoi(nd - 1, towerorg, toweraux, towerdest);
-        move(towerorg, towerdest); // aqui es on em de posar x printar tambe
-        hanoi(nd - 1, toweraux, towerdest, towerorg);
-        
-    }                                                     
-}// hanoi
+void towers(int, char, char, char);
+void hanoi(int nd, int, int , int);
 
 int main(int argc, char **argv){
     int nd = NUMERO_DISCOS;
@@ -60,10 +47,40 @@ int main(int argc, char **argv){
         }
     }
 
-    hanoi(nd, 0, 1, 2);
-    
+    printf("Entrar numero de discos: ");
+    scanf("%d", &nd);
+    printf("The sequence of moves involved in the Tower of Hanoi are :\n");
+    towers(nd, 'A', 'C', 'B');
+
+    //hanoi(nd, 0, 1, 2);
+
+
     return(0);
 } // main
+
+void hanoi(int nd, int towerorg, int towerdest, int toweraux){
+    if (nd == 1){
+        //move(towerorg, towerdest);
+    }
+
+    else{
+        hanoi(nd - 1, towerorg, toweraux, towerdest);
+        //move(towerorg, towerdest); // aqui es on em de posar x printar tambe
+        hanoi(nd - 1, toweraux, towerdest, towerorg);
+    }
+}// hanoi
+
+
+void towers(int num, char frompeg, char topeg, char auxpeg) {
+    if (num == 1){
+        printf("\n Move disk 1 from peg %c to peg %c", frompeg, topeg);
+        return;
+    }
+
+    towers(num - 1, frompeg, auxpeg, topeg);
+    printf("\n Move disk %d from peg %c to peg %c", num, frompeg, topeg);
+    towers(num - 1, auxpeg, topeg, frompeg);
+}
 
 #endif // exemple torres de hanoi : basic
 

@@ -18,14 +18,15 @@
 #include <string.h>
 #include "hanoi_list.h"
 
-int demanar_moviment(int move){
-    printf("Introdueix el moviment que vols visualitzar;\n");
-    scanf("%d", &move);
-}
+//SALTA ERROR. DEMOMENT ES QUEDA COMENTAT
+//int demanar_moviment(int move){
+//    printf("Introdueix el moviment que vols visualitzar;\n");
+//    scanf("%d", &move);
+//}
 
 
 // This function indicates a move of one disk
-void move(int towerorg, int towerdest){
-    printf("Move one disc from %d to %d\n", towerorg, towerdest);
-    
-}
+//void move(int towerorg, int towerdest){
+//    printf("Move one disc from %d to %d\n", towerorg, towerdest);
+//
+//}
