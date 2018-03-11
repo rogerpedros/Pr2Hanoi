@@ -20,18 +20,15 @@
 #include <stdio.h>
 #include <string.h>
 #include "hanoi_list.h"
+#include "moviments.c"
 
-// This function indicates a move of one disk
-void move(int towerorg, int towerdest){
-    
-    printf("Move one disc from %d to %d\n", towerorg, towerdest);
-    
-}// move
+
 
 // Recursive function to move nd disks from the origin tower towerorg, to 
 // destination tower towerdest, using toweraux as auxiliary tower.
 // it doesn't return anything and instead it prints information of the move of 
 // the disks to display
+
 void hanoi(int nd, int towerorg, int towerdest, int toweraux){
     
     if (nd == 1){
@@ -39,17 +36,31 @@ void hanoi(int nd, int towerorg, int towerdest, int toweraux){
         
     }
     else{
+
         hanoi(nd - 1, towerorg, toweraux, towerdest);
-        move(towerorg, towerdest);
+        move(towerorg, towerdest); // aqui es on em de posar x printar tambe
         hanoi(nd - 1, toweraux, towerdest, towerorg);
         
     }                                                     
 }// hanoi
 
-int main(){    
-    
+int main(int argc, char **argv){
     int nd = NUMERO_DISCOS;
-    
+
+    char *fileName;
+    fileName = "";
+
+    for (int i = 1; i>argc; i++){
+        if(strcmp(argv[i], "-d")){
+            printf("El numero de discos será  %c", argv[i+1]);
+            sscanf(argv[i+1], "%d", &nd);
+        }
+        if(strcmp(argv[i], "-f")){
+            printf("El fitxer de sortirda será %s", argv[i+1]);
+            sscanf(argv[i+1], "%d", &fileName);
+        }
+    }
+
     hanoi(nd, 0, 1, 2);
     
     return(0);
