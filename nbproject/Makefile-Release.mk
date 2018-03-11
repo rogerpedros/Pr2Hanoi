@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Llistes.o \
 	${OBJECTDIR}/discos.o \
 	${OBJECTDIR}/hanoi_basico.o \
 	${OBJECTDIR}/hanoi_list.o \
@@ -66,6 +67,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pr2hanoi.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pr2hanoi ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/Llistes.o: Llistes.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Llistes.o Llistes.c
 
 ${OBJECTDIR}/discos.o: discos.c
 	${MKDIR} -p ${OBJECTDIR}

@@ -33,6 +33,14 @@
     char moviment;
 } node; */
 
+typedef struct {
+    int  move;   // any fields we need to have
+    int  recProf;
+    int  disc;
+    char from;
+    char to;
+} sinfo2;
+
 typedef struct{
   int num_moviments;
   struct node *seguent;
