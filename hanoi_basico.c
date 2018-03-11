@@ -36,7 +36,6 @@ void hanoi(int nd, int towerorg, int towerdest, int toweraux){
         
     }
     else{
-
         hanoi(nd - 1, towerorg, toweraux, towerdest);
         move(towerorg, towerdest); // aqui es on em de posar x printar tambe
         hanoi(nd - 1, toweraux, towerdest, towerorg);

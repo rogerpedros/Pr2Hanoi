@@ -1,4 +1,4 @@
-/* 
+/*
  *  Grup de Practiques: P401
  * Professor practiques: Angel David Blanco Casales
  * Incidencies:
@@ -10,7 +10,7 @@
  * Collaboradors (si cal):
  *
  * Us del programa:
- * Estat de l'entrega: 
+ * Estat de l'entrega:
  * Altres comentaris o incidencies:
  */
 #include <stdio.h>
@@ -29,3 +29,17 @@ int init_torres(int matriu[NUMERO_DISCOS][NUMERO_TORRES]) { //Initcialitza un ma
     }
 }
 
+
+void init_discos(){
+
+    int i;
+    int j;
+    int disco=1;
+    int matriu[NUMERO_DISCOS][NUMERO_TORRES];
+    init_torres(matriu);
+
+    for(i=0; i<NUMERO_DISCOS; i++){
+        matriu[i][0]= disco;
+        disco++;
+    }
+}
