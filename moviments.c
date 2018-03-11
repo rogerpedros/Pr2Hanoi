@@ -26,7 +26,6 @@ int demanar_moviment(int move){
 
 // This function indicates a move of one disk
 void move(int towerorg, int towerdest){
-    
     printf("Move one disc from %d to %d\n", towerorg, towerdest);
     
 }

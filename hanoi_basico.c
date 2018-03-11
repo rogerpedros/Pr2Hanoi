@@ -48,11 +48,11 @@ int main(int argc, char **argv){
     int nd = NUMERO_DISCOS;
 
     char *fileName;
-    fileName = "";
+    fileName = OUTPUT_FILENAME;
 
     for (int i = 1; i>argc; i++){
         if(strcmp(argv[i], "-d")){
-            printf("El numero de discos será  %c", argv[i+1]);
+            printf("El numero de discos será  %d", argv[i+1]);
             sscanf(argv[i+1], "%d", &nd);
         }
         if(strcmp(argv[i], "-f")){

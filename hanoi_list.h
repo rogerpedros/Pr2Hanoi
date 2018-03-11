@@ -21,22 +21,21 @@
 
 
 #define NUMERO_DISCOS    3 // Number of discs to consider
-#define NUMERO_TORRES   3 // Number of towers 
+#define NUMERO_TORRES   3 // Number of towers
 #define MOVIMENTS  7    //2^n - 1 on n es el nombre de discs
+
+#define OUTPUT_FILENAME "output.txt"
 
 
 /*typedef struct {
     struct node* seguent; //Apunta al proxim element
     int num_moviment;
     char moviment;
-
 } node; */
 
 typedef struct{
-    
   int num_moviments;
   struct node *seguent;
-  
 }node;
 
 
