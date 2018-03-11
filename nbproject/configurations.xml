@@ -14,7 +14,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Llistes.c</itemPath>
+      <itemPath>List_operations.c</itemPath>
       <itemPath>discos.c</itemPath>
       <itemPath>hanoi_basico.c</itemPath>
       <itemPath>hanoi_list.c</itemPath>
@@ -38,7 +38,7 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="Llistes.c" ex="false" tool="0" flavor2="0">
+      <item path="List_operations.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Llistes.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -77,7 +77,7 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Llistes.c" ex="false" tool="0" flavor2="0">
+      <item path="List_operations.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Llistes.h" ex="false" tool="3" flavor2="0">
       </item>
