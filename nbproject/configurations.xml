@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="100">
+<configurationDescriptor version="95">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>file_operations.h</itemPath>
+      <itemPath>fileoperations.h</itemPath>
       <itemPath>hanoi_engine.h</itemPath>
       <itemPath>hanoi_list.h</itemPath>
-      <itemPath>menu.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -16,13 +15,22 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>file_operations.c</itemPath>
+      <itemPath>fileoperations.c</itemPath>
       <itemPath>hanoi_engine.c</itemPath>
       <itemPath>hanoi_list.c</itemPath>
       <itemPath>list_operations.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>menu.c</itemPath>
       <itemPath>utils.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

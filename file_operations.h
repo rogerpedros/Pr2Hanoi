@@ -14,3 +14,5 @@
  * Altres comentaris o incidencies:
  */
 
+void createFile();
+void writeFile();
