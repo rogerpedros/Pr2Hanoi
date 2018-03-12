@@ -1,11 +1,16 @@
-/* 
- * File:   fileoperations.h
- * Author: u150263
+/*
+ *  Grup de Practiques: P401
+ * Professor practiques: Angel David Blanco Casales
+ * Incidencies:
  *
- * Created on 12 de marzo de 2018, 16:58
+ * Autor (Nom i NIA): Carlos Hortensius Fernandez 205437
+ * Roger Pedros Villalba 206798
+ * Marc Gaja Pescador 204885
+ * Data/hora:
+ * Collaboradors (si cal):
+ *
+ * Us del programa:
+ * Estat de l'entrega:
+ * Altres comentaris o incidencies:
  */
 
-#ifndef FILEOPERATIONS_H
-#define	FILEOPERATIONS_H
-
-#endif	/* FILEOPERATIONS_H */

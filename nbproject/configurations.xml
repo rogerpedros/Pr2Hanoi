@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="95">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>fileoperations.h</itemPath>
+      <itemPath>file_operations.h</itemPath>
       <itemPath>hanoi_engine.h</itemPath>
       <itemPath>hanoi_list.h</itemPath>
+      <itemPath>menu.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -15,11 +16,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>fileoperations.c</itemPath>
+      <itemPath>file_operations.c</itemPath>
       <itemPath>hanoi_engine.c</itemPath>
       <itemPath>hanoi_list.c</itemPath>
       <itemPath>list_operations.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>menu.c</itemPath>
       <itemPath>utils.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -38,9 +40,9 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="fileoperations.c" ex="false" tool="0" flavor2="0">
+      <item path="file_operations.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="fileoperations.h" ex="false" tool="3" flavor2="0">
+      <item path="file_operations.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hanoi_engine.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -53,6 +55,10 @@
       <item path="list_operations.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="utils.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -77,9 +83,9 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="fileoperations.c" ex="false" tool="0" flavor2="0">
+      <item path="file_operations.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="fileoperations.h" ex="false" tool="3" flavor2="0">
+      <item path="file_operations.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hanoi_engine.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -92,6 +98,10 @@
       <item path="list_operations.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="utils.c" ex="false" tool="0" flavor2="0">
       </item>

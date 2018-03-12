@@ -44,3 +44,9 @@ void init_discos(){
         disco++;
     }
 }
+
+void flush_input() {
+    char c;
+    while ((c = getchar()) != '\n' && c != EOF) {
+    }
+}
