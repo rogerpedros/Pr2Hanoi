@@ -18,6 +18,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "menu.h"
+#include "hanoi_list.h"
+#include "hanoi_engine.h"
 
 int read_option(const char* msg) {
     int option = OPTION_INVALID;
@@ -47,7 +49,7 @@ void menu() {
 
         switch (option) {
             case OPTION_REPEAT_HANOI:
-                
+                repetir_hanoi();
                 break;
 
             case OPTION_SHOW_MOVEMENT:

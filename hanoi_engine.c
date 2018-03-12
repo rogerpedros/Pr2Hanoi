@@ -36,13 +36,24 @@ void hanoi(int nd, int towerorg, int towerdest, int toweraux) {
 }// hanoi
 
 //This function indicates a move of one disk
-void move(int nd, int towerorg, int towerdest){
-    printf("\nMoviment del disc %d des de la torre T%d a la torre T%d", nd, towerorg, towerdest);
+
+void move(int nd, int towerorg, int towerdest) {
+    printf("\nMoviment del disc %d des de la torre T%d a la torre T%d\n", nd, towerorg, towerdest);
 }
 
-int demanar_moviment(int moveNumer){
+int demanar_moviment(int moveNumer) {
     int userMoveNumber = NULL;
 
     printf("Introdueix el moviment que vols visualitzar;\n");
     scanf("%d", userMoveNumber);
+}
+
+void repetir_hanoi() {
+
+    int nd = NUMERO_DISCOS;
+    printf("Entrar numero de discos: ");
+    scanf("%d", &nd);
+    printf("The sequence of moves involved in the Tower of Hanoi are :\n");
+
+    hanoi(nd, 0, 1, 2);
 }

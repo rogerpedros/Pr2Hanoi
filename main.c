@@ -39,12 +39,8 @@ int main(int argc, char **argv) {
         }
     }
 
-    printf("Entrar numero de discos: ");
-    scanf("%d", &nd);
-    printf("The sequence of moves involved in the Tower of Hanoi are :\n");
-
-    hanoi(nd, 0, 1, 2);
-
+    repetir_hanoi();
+    menu();
     //TODO LA CRIDA AL  MENU HA D'ANAR COL·LOCADA AQUI.
     //Exemples menu: Buscar x moviment. Reptir hanoi. Canviar fitxer output.
 
