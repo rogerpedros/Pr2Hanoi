@@ -10,4 +10,8 @@ add_executable(Pr2Hanoi
         hanoi_engine.c
 
         list_operations.c
-        utils.c hanoi_engine.h)
+        utils.c hanoi_engine.h
+        file_operations.c
+        file_operations.h
+        menu.c
+        menu.h)

@@ -21,6 +21,8 @@
 #include <string.h>
 #include "hanoi_list.h"
 #include "hanoi_engine.h"
+#include "file_operations.h"
+#include "menu.h"
 
 int main(int argc, char **argv) {
     int nd = NUMERO_DISCOS;
@@ -28,14 +30,22 @@ int main(int argc, char **argv) {
     char *fileName;
     fileName = OUTPUT_FILENAME;
 
-    for (int i = 1; i > argc; i++) {
-        if (strcmp(argv[i], "-d")) {
-            printf("El numero de discos será  %d", argv[i + 1]);
-            sscanf(argv[i + 1], "%d", &nd);
+    for (int i = 0; i < argc; ++i) {
+        printf("argv[%d]: %s\n", i, argv[i]);
+    }
+
+    for (int i = 0; i < argc; ++i) {
+        if (strstr(argv[i], "-d")) {
+            printf("He entrat a -d per: argv[%d]: %s\n", i, argv[i]);
+            //printf("El numero de discos será  %d", (int)argv[i + 1]);
+            //printf("argv[%d]: %s\n", i, argv[i]);
+            //sscanf(argv[i++], "%d", &nd);
         }
-        if (strcmp(argv[i], "-f")) {
-            printf("El fitxer de sortirda será %s", argv[i + 1]);
-            sscanf(argv[i + 1], "%d", &fileName);
+
+        if (strstr(argv[i], "-f")) {
+            printf("He entrat a -f per: argv[%d]: %s\n", i, argv[i]);
+            //printf("El fitxer de sortirda será %s", argv[i + 1]);
+            //sscanf(argv[i++], "%c", &fileName);
         }
     }
 

@@ -27,7 +27,7 @@ void createFile(){
     
     if (f == NULL){
         printf ("No es pot crear el fitxer");
-        return 1;
+        return;
     }
     
     fclose (f);
@@ -41,7 +41,7 @@ void writeFile(){
     
     if (f == NULL){
         printf ("No es pot crear el fitxer");
-        return 1;
+        return;
     }
     fprintf (f, "\n=============================================================================================");
     fprintf(f,"\n Command Line entered:  \n");

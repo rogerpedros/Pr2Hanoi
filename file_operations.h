@@ -13,6 +13,9 @@
  * Estat de l'entrega:
  * Altres comentaris o incidencies:
  */
+#define OUTPUT_FILENAME "output.txt"
+
+char fileName;
 
 void createFile();
 void writeFile();

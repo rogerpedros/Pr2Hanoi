@@ -16,8 +16,6 @@
 #ifndef HANOI_LIST__
 #define HANOI_LIST__
 
-#define OUTPUT_FILENAME "output.txt"
-
 #define TRUE  1
 #define FALSE 0
 
