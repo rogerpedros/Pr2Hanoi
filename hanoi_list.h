@@ -16,13 +16,6 @@
 #ifndef HANOI_LIST__
 #define HANOI_LIST__
 
-#include <stdio.h>
-#include <stdlib.h>
-
-#define NUMERO_DISCOS    3 // Number of discs to consider
-#define NUMERO_TORRES   3 // Number of towers
-#define MOVIMENTS  7    //2^n - 1 on n es el nombre de discs
-
 #define OUTPUT_FILENAME "output.txt"
 
 #define TRUE  1
