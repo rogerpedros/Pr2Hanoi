@@ -10,7 +10,10 @@
  * Date: February 2017
  */
 
-#include <mem.h>
+#include <memory.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "hanoi_list.h"
 
 // to print the information into a file

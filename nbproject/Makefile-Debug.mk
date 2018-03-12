@@ -35,13 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/discos.o \
-	${OBJECTDIR}/hanoi_basico.o \
+	${OBJECTDIR}/hanoi_engine.o \
 	${OBJECTDIR}/hanoi_list.o \
 	${OBJECTDIR}/list_operations.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/moviments.o \
-	${OBJECTDIR}/torres.o
+	${OBJECTDIR}/utils.o
 
 
 # C Compiler Flags
@@ -68,15 +66,10 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pr2hanoi.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pr2hanoi ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/discos.o: discos.c
+${OBJECTDIR}/hanoi_engine.o: hanoi_engine.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/discos.o discos.c
-
-${OBJECTDIR}/hanoi_basico.o: hanoi_basico.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/hanoi_basico.o hanoi_basico.c
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/hanoi_engine.o hanoi_engine.c
 
 ${OBJECTDIR}/hanoi_list.o: hanoi_list.c
 	${MKDIR} -p ${OBJECTDIR}
@@ -93,15 +86,10 @@ ${OBJECTDIR}/main.o: main.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
-${OBJECTDIR}/moviments.o: moviments.c
+${OBJECTDIR}/utils.o: utils.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/moviments.o moviments.c
-
-${OBJECTDIR}/torres.o: torres.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/torres.o torres.c
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils.o utils.c
 
 # Subprojects
 .build-subprojects:
