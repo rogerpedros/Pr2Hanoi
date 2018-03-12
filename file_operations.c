@@ -17,3 +17,14 @@
 #include <string.h>
 #include <stdlib.h>
 #include "file_operations.h"
+
+void createFile(char fileName){
+    FILE *f
+    f = fopen (fileName, "w");
+    if (f == NULL) {
+        printf("No es pot crear el fitxer");
+        return 0;
+        
+    }
+    
+}
