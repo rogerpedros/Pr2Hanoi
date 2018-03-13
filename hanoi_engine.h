@@ -13,6 +13,8 @@
 void hanoi(int, int, int, int, int);
 
 void move(int, int, int, int);
+void setToList(int, int, int, int, int);
+
 void callHanoi(int);
 void repetirHanoi();
 

@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "hanoi_engine.h"
+#include "hanoi_list.h"
 
 // Recursive function to move nd disks from the origin tower towerorg, to
 // destination tower towerdest, using toweraux as auxiliary tower.
@@ -41,11 +42,63 @@ void hanoi(int nd, int towerorg, int towerdest, int toweraux, int moveCount) {
 
 //This function indicates a move of one disk
 void move(int nd, int towerorg, int towerdest, int profunditat) {
-    printf("\nProfunditat %d. Disc %d des de la torre T%d a la torre T%d", profunditat, nd, towerorg, towerdest);
+    static int count = 0;
+    count++;
+
+    printf("\nMoviment: %d. ", count);
+    printf("Profunditat %d. Disc %d des de la torre T%d a la torre T%d", profunditat, nd, towerorg, towerdest);
+
+    setToList(count, profunditat, nd, towerorg, towerdest);
+    //printToFile();
+}
+
+//This function indicates a move of one disk
+void setToList(int movementNum, int profunditat, int nd, int towerorg, int towerdest) {
+    slist list;
+    sinfo info;
+    sinfo v[] = {{movementNum, profunditat, nd, towerorg, towerdest}};
+
+    int dim = sizeof(v) / sizeof(sinfo);
+
+    // list operations
+    int i, j;
+    snode *after, *node = NULL;
+    int found;
+
+    init_list(&list);
+
+    for (i = 0; i < 5; i++) {
+        info = get_element(v, i);
+        after = searchorderlist(&list, info);
+        addlist(&list, info, after);
+    }
+
+
+//    for (j = 0; j < 5; j++) { // to have all cases tested
+//        for (i = 0; i < dim; i++) {
+//            info = get_element(v, i);
+//            after = searchorderlist(&list, info);
+//            addlist(&list, info, after);
+//        }
+//        for (i = dim - 1; i >= 2; i--) {
+//            info = get_element(v, i);
+//            found = searchnodelist(&list, info, &node);
+//            deletelist(&list, &info, node);
+//        }
+//        info = get_element(v, 2);
+//        after = searchorderlist(&list, info);
+//        addlist(&list, info, after);
+//        for (i = 2; i >= 0; i--) {
+//            info = get_element(v, i);
+//            found = searchnodelist(&list, info, &node);
+//            deletelist(&list, &info, node);
+//        }
+//    }
+
 }
 
 
-void callHanoi(int nd){
+void callHanoi(int nd) {
     printf("\nEls moviments dels discos entre les torres de Hanoi son:\n");
     hanoi(nd, 0, 1, 2, 0);
 }
