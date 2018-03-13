@@ -23,22 +23,25 @@
 // it doesn't return anything and instead it prints information of the move of
 // the disks to display
 void hanoi(int nd, int towerorg, int towerdest, int toweraux, int moveCount) {
-    int internalCounter  = moveCount;
+    static int depth = 0;
+    depth++;
 
     if (nd == 1) {
-        move(nd, towerorg, towerdest, internalCounter++ );
+        move(nd, towerorg, towerdest, depth);
+        depth--;
         return;
     }
 
-    hanoi(nd - 1, towerorg, toweraux, towerdest, internalCounter++);
-    move(nd, towerorg, towerdest, internalCounter++);
-    hanoi(nd - 1, toweraux, towerdest, towerorg, internalCounter++);
+    hanoi(nd - 1, towerorg, toweraux, towerdest, 0);
+    move(nd, towerorg, towerdest, depth);
+    hanoi(nd - 1, toweraux, towerdest, towerorg, 0);
+    depth--;
 
 }// hanoi
 
 //This function indicates a move of one disk
-void move(int nd, int towerorg, int towerdest, int moveCount) {
-    printf("\nMoviment %d. Disc %d des de la torre T%d a la torre T%d",moveCount, nd, towerorg, towerdest);
+void move(int nd, int towerorg, int towerdest, int profunditat) {
+    printf("\nProfunditat %d. Disc %d des de la torre T%d a la torre T%d", profunditat, nd, towerorg, towerdest);
 }
 
 
