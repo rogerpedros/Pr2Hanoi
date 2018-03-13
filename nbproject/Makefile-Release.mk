@@ -38,7 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/file_operations.o \
 	${OBJECTDIR}/hanoi_engine.o \
 	${OBJECTDIR}/hanoi_list.o \
-	${OBJECTDIR}/list_operations.o \
+	${OBJECTDIR}/hanoi_list_operations.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/menu.o \
 	${OBJECTDIR}/utils.o
@@ -83,10 +83,10 @@ ${OBJECTDIR}/hanoi_list.o: hanoi_list.c
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/hanoi_list.o hanoi_list.c
 
-${OBJECTDIR}/list_operations.o: list_operations.c
+${OBJECTDIR}/hanoi_list_operations.o: hanoi_list_operations.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/list_operations.o list_operations.c
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/hanoi_list_operations.o hanoi_list_operations.c
 
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}

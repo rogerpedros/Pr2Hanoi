@@ -19,29 +19,18 @@
 #include "hanoi_engine.h"
 #include "utils.h"
 
-void init_torres(int matriu) {
-    int i, j;
-    for (i = 0; i < NUMERO_DISCOS; i++) {
-        for (j = 0; j < NUMERO_TORRES; j++) {
-            //matriu[i][j] = 0;
-        }
-    }
-}
-
-
-void init_discos(){
-    int i, j, disco=1;
-    int matriu[NUMERO_DISCOS][NUMERO_TORRES];
-    init_torres(matriu);
-
-    for(i=0; i<NUMERO_DISCOS; i++){
-        matriu[i][0]= disco;
-        disco++;
-    }
-}
 
 void flush_input() {
     char c;
     while ((c = getchar()) != '\n' && c != EOF) {
     }
+}
+
+char get_hanoi_date() {
+
+    time_t t = time(NULL);
+    struct tm *tm = localtime(&t);
+    char s[64];
+    strftime(s, sizeof (s), "%c", tm); //La data esta en la s
+
 }

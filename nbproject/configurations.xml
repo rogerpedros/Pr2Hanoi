@@ -20,7 +20,7 @@
       <itemPath>file_operations.c</itemPath>
       <itemPath>hanoi_engine.c</itemPath>
       <itemPath>hanoi_list.c</itemPath>
-      <itemPath>list_operations.c</itemPath>
+      <itemPath>hanoi_list_operations.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>menu.c</itemPath>
       <itemPath>utils.c</itemPath>
@@ -63,7 +63,7 @@
       </item>
       <item path="hanoi_list.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="list_operations.c" ex="false" tool="0" flavor2="0">
+      <item path="hanoi_list_operations.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -108,7 +108,7 @@
       </item>
       <item path="hanoi_list.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="list_operations.c" ex="false" tool="0" flavor2="0">
+      <item path="hanoi_list_operations.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
