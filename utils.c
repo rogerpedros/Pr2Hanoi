@@ -15,6 +15,7 @@
  */
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 #include "hanoi_list.h"
 #include "hanoi_engine.h"
 #include "utils.h"
