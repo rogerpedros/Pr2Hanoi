@@ -23,12 +23,10 @@
 
 void flush_input() {
     char c;
-    while ((c = getchar()) != '\n' && c != EOF) {
-    }
+    while ((c = getchar()) != '\n' && c != EOF) {}
 }
 
-char get_hanoi_date() {
-
+char getHanoiDate() {
     time_t t = time(NULL);
     struct tm *tm = localtime(&t);
     char s[64];

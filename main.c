@@ -40,7 +40,9 @@ int main(int argc, char **argv) {
             sscanf(argv[i+1], "%p", &fileName);
         }
     }
+
     //createFile(fileName); problemes
+    //writeFileHeadboard(argv[0], nd, fileName);
     callHanoi(nd);
     menu();
 

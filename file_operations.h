@@ -18,4 +18,4 @@
 //extern char fileName;
 
 void createFile(char);
-void writeFile();
+void writeFileHeadboard(char, int, char);

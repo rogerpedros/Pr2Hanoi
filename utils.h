@@ -6,7 +6,7 @@
 #define PR2HANOI_UTILS_H
 
 void flush_input();
-char get_hanoi_date();
+char getHanoiDate();
 
 #endif //PR2HANOI_UTILS_H
 
