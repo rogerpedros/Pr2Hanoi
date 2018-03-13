@@ -21,7 +21,7 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=Cygwin_4.x-Windows
+CND_PLATFORM=Cygwin_1-Windows
 CND_DLIB_EXT=dll
 CND_CONF=Debug
 CND_DISTDIR=dist
@@ -68,37 +68,37 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pr2hanoi.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pr2hanoi ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/file_operations.o: file_operations.c 
+${OBJECTDIR}/file_operations.o: file_operations.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/file_operations.o file_operations.c
 
-${OBJECTDIR}/hanoi_engine.o: hanoi_engine.c 
+${OBJECTDIR}/hanoi_engine.o: hanoi_engine.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/hanoi_engine.o hanoi_engine.c
 
-${OBJECTDIR}/hanoi_list.o: hanoi_list.c 
+${OBJECTDIR}/hanoi_list.o: hanoi_list.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/hanoi_list.o hanoi_list.c
 
-${OBJECTDIR}/list_operations.o: list_operations.c 
+${OBJECTDIR}/list_operations.o: list_operations.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/list_operations.o list_operations.c
 
-${OBJECTDIR}/main.o: main.c 
+${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
-${OBJECTDIR}/menu.o: menu.c 
+${OBJECTDIR}/menu.o: menu.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/menu.o menu.c
 
-${OBJECTDIR}/utils.o: utils.c 
+${OBJECTDIR}/utils.o: utils.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils.o utils.c
@@ -109,7 +109,6 @@ ${OBJECTDIR}/utils.o: utils.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pr2hanoi.exe
 
 # Subprojects
 .clean-subprojects:
