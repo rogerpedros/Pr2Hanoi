@@ -29,6 +29,7 @@
 #define OPTION_INVALID -1
 
 
+void menu();
 
 #endif /* MENU_H */
 

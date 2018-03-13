@@ -20,6 +20,7 @@
 #include "menu.h"
 #include "hanoi_list.h"
 #include "hanoi_engine.h"
+#include "utils.h"
 
 int read_option(const char* msg) {
     int option = OPTION_INVALID;
@@ -32,24 +33,22 @@ int read_option(const char* msg) {
 }
 
 int query_option() {
-    printf("\n");
+    printf("\n\n");
     printf( MSG_REPEAT_HANOI, OPTION_REPEAT_HANOI);
     printf(MSG_SHOW_MOVEMENT, OPTION_SHOW_MOVEMENT);
     printf(MSG_CHANGE_OUTPUT, OPTION_CHANGE_OUTPUT);
     printf(MSG_QUIT, OPTION_QUIT);
 
-
-    return read_option("Choose an option: ");
+    return read_option("Tria una opcio: ");
 }
 
 void menu() {
-
     int option = query_option();
     while (option != OPTION_QUIT) {
 
         switch (option) {
             case OPTION_REPEAT_HANOI:
-                repetir_hanoi();
+                repetirHanoi();
                 break;
 
             case OPTION_SHOW_MOVEMENT:
@@ -61,11 +60,11 @@ void menu() {
                 break;
 
             default:
-                printf("Invalid option. Try again...\n\n");
+                printf("\nInvalid option. Try again...\n\n");
                 break;
         }
 
-        printf("Press enter to continue...");
+        printf("\nPress enter to continue...");
         flush_input();
 
         option = query_option();

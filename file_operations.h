@@ -15,7 +15,7 @@
  */
 #define OUTPUT_FILENAME "output.txt"
 
-char fileName;
+//extern char fileName;
 
-void createFile();
+void createFile(char);
 void writeFile();

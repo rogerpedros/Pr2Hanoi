@@ -25,34 +25,24 @@
 #include "menu.h"
 
 int main(int argc, char **argv) {
+
     int nd = NUMERO_DISCOS;
-
-    char *fileName;
-    fileName = OUTPUT_FILENAME;
+    char fileName[] = OUTPUT_FILENAME;
 
     for (int i = 0; i < argc; ++i) {
-        printf("argv[%d]: %s\n", i, argv[i]);
-    }
-
-    for (int i = 0; i < argc; ++i) {
-        if (strstr(argv[i], "-d")) {
-            printf("He entrat a -d per: argv[%d]: %s\n", i, argv[i]);
-            //printf("El numero de discos será  %d", (int)argv[i + 1]);
-            //printf("argv[%d]: %s\n", i, argv[i]);
-            //sscanf(argv[i++], "%d", &nd);
+        if ( (strstr(argv[i], "-d")) && (i != 0) ){
+            printf("El numero de discos entrat es:  %i \n", atoi(argv[i + 1]));
+            sscanf(argv[i+1], "%d", &nd);
         }
 
-        if (strstr(argv[i], "-f")) {
-            printf("He entrat a -f per: argv[%d]: %s\n", i, argv[i]);
-            //printf("El fitxer de sortirda será %s", argv[i + 1]);
-            //sscanf(argv[i++], "%c", &fileName);
+        if ( (strstr(argv[i], "-f")) && (i != 0) ) {
+            printf("El fitxer de sortirda entrat sera: %s \n", argv[i+1]);
+            sscanf(argv[i+1], "%p", &fileName);
         }
     }
-
-    repetir_hanoi();
+    //createFile(fileName); problemes
+    callHanoi(nd);
     menu();
-    //TODO LA CRIDA AL  MENU HA D'ANAR COL·LOCADA AQUI.
-    //Exemples menu: Buscar x moviment. Reptir hanoi. Canviar fitxer output.
 
     return (0);
 } // main

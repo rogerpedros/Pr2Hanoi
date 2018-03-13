@@ -20,8 +20,8 @@
 #include "file_operations.h"
 #include "hanoi_engine.h"
 
-void createFile(){
-    char fileName[] = "output.txt"; 
+void createFile(char fileName){
+    char fileName2[] = "output.txt";
     FILE *f;
     f = fopen(fileName, "w");
     
@@ -31,7 +31,6 @@ void createFile(){
     }
     
     fclose (f);
-    
 }
 
 void writeFile(){

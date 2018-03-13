@@ -22,38 +22,44 @@
 // destination tower towerdest, using toweraux as auxiliary tower.
 // it doesn't return anything and instead it prints information of the move of
 // the disks to display
+void hanoi(int nd, int towerorg, int towerdest, int toweraux, int moveCount) {
+    int internalCounter  = moveCount;
 
-void hanoi(int nd, int towerorg, int towerdest, int toweraux) {
     if (nd == 1) {
-        move(nd, towerorg, towerdest);
+        move(nd, towerorg, towerdest, internalCounter++ );
         return;
     }
 
-    hanoi(nd - 1, towerorg, toweraux, towerdest);
-    move(nd, towerorg, towerdest);
-    hanoi(nd - 1, toweraux, towerdest, towerorg);
+    hanoi(nd - 1, towerorg, toweraux, towerdest, internalCounter++);
+    move(nd, towerorg, towerdest, internalCounter++);
+    hanoi(nd - 1, toweraux, towerdest, towerorg, internalCounter++);
 
 }// hanoi
 
 //This function indicates a move of one disk
-
-void move(int nd, int towerorg, int towerdest) {
-    printf("\nMoviment del disc %d des de la torre T%d a la torre T%d\n", nd, towerorg, towerdest);
+void move(int nd, int towerorg, int towerdest, int moveCount) {
+    printf("\nMoviment %d. Disc %d des de la torre T%d a la torre T%d",moveCount, nd, towerorg, towerdest);
 }
 
-int demanar_moviment(int moveNumer) {
+
+void callHanoi(int nd){
+    printf("\nEls moviments dels discos entre les torres de Hanoi son:\n");
+    hanoi(nd, 0, 1, 2, 0);
+}
+
+void repetirHanoi() {
+    int newNd;
+    printf("Entrar numero de discos: ");
+    scanf("%d", &newNd);
+
+    callHanoi(newNd);
+}
+
+
+int demanarMoviment(int moveNumer) {
     int userMoveNumber = NULL;
 
     printf("Introdueix el moviment que vols visualitzar;\n");
     scanf("%d", userMoveNumber);
 }
 
-void repetir_hanoi() {
-
-    int nd = NUMERO_DISCOS;
-    printf("Entrar numero de discos: ");
-    scanf("%d", &nd);
-    printf("The sequence of moves involved in the Tower of Hanoi are :\n");
-
-    hanoi(nd, 0, 1, 2);
-}

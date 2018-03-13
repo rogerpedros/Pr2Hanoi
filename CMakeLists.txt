@@ -14,4 +14,4 @@ add_executable(Pr2Hanoi
         file_operations.c
         file_operations.h
         menu.c
-        menu.h)
+        menu.h utils.h)
