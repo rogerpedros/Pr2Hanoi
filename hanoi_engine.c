@@ -67,33 +67,26 @@ void setToList(int movementNum, int profunditat, int nd, int towerorg, int tower
 
     init_list(&list);
 
-    for (i = 0; i < 5; i++) {
+
+    for (i = 0; i < dim; i++) {
         info = get_element(v, i);
         after = searchorderlist(&list, info);
         addlist(&list, info, after);
     }
+    for (i = dim - 1; i >= 2; i--) {
+        info = get_element(v, i);
+        found = searchnodelist(&list, info, &node);
+        deletelist(&list, &info, node);
+    }
+    info = get_element(v, 2);
+    after = searchorderlist(&list, info);
+    addlist(&list, info, after);
+    for (i = 2; i >= 0; i--) {
+        info = get_element(v, i);
+        found = searchnodelist(&list, info, &node);
+        deletelist(&list, &info, node);
+    }
 
-
-//    for (j = 0; j < 5; j++) { // to have all cases tested
-//        for (i = 0; i < dim; i++) {
-//            info = get_element(v, i);
-//            after = searchorderlist(&list, info);
-//            addlist(&list, info, after);
-//        }
-//        for (i = dim - 1; i >= 2; i--) {
-//            info = get_element(v, i);
-//            found = searchnodelist(&list, info, &node);
-//            deletelist(&list, &info, node);
-//        }
-//        info = get_element(v, 2);
-//        after = searchorderlist(&list, info);
-//        addlist(&list, info, after);
-//        for (i = 2; i >= 0; i--) {
-//            info = get_element(v, i);
-//            found = searchnodelist(&list, info, &node);
-//            deletelist(&list, &info, node);
-//        }
-//    }
 
 }
 
