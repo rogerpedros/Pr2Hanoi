@@ -25,6 +25,8 @@
 #include "menu.h"
 
 int main(int argc, char **argv) {
+    slist list;
+    init_list(&list);
 
     int nd = NUMERO_DISCOS;
     char fileName[] = OUTPUT_FILENAME;
@@ -43,8 +45,8 @@ int main(int argc, char **argv) {
 
     //createFile(fileName); problemes
     //writeFileHeadboard(argv[0], nd, fileName);
-    callHanoi(nd);
-    menu();
+    callHanoi(nd, &list);
+    menu(&list);
 
     return (0);
 } // main

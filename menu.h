@@ -18,6 +18,8 @@
 #define MENU_H
 
 
+#include "hanoi_list.h"
+
 #define MSG_QUIT "%d. Quit\n"
 #define OPTION_QUIT 0
 #define MSG_REPEAT_HANOI "%d. Repeat Hanoi\n"
@@ -29,7 +31,7 @@
 #define OPTION_INVALID -1
 
 
-void menu();
+void menu(slist*);
 
 #endif /* MENU_H */
 
