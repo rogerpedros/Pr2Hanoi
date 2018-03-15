@@ -22,9 +22,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "hanoi_engine.h"
 
 #define SUCCES TRUE
 #define FAIL   FALSE
+
+typedef struct{
+    int matriu_mov[NUMERO_DISCOS][NUMERO_TORRES];
+    int num_discos;
+    int num_torres;
+    int movimiento;
+    
+}matriu;
+
 
 typedef struct {
     int  move;   // any fields we need to have

@@ -17,6 +17,7 @@
 #ifndef MENU_H
 #define MENU_H
 
+#include "hanoi_list.h"
 
 #define MSG_QUIT "%d. Quit\n"
 #define OPTION_QUIT 0
@@ -29,7 +30,7 @@
 #define OPTION_INVALID -1
 
 
-void menu();
+void menu(matriu);
 
 #endif /* MENU_H */
 

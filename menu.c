@@ -42,13 +42,13 @@ int query_option() {
     return read_option("Tria una opcio: ");
 }
 
-void menu() {
+void menu(matriu mat) {
     int option = query_option();
     while (option != OPTION_QUIT) {
 
         switch (option) {
             case OPTION_REPEAT_HANOI:
-                repetirHanoi();
+                repetirHanoi(mat);
                 break;
 
             case OPTION_SHOW_MOVEMENT:
