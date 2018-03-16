@@ -18,6 +18,7 @@
 #include <string.h>
 #include "hanoi_engine.h"
 #include "hanoi_list.h"
+#include "menu.h"
 
 // Recursive function to move nd disks from the origin tower towerorg, to
 // destination tower towerdest, using toweraux as auxiliary tower.
@@ -105,7 +106,7 @@ void repetirHanoi(slist *list, matriux mat) {
     callHanoi(newNd, list, mat);
 }
 
-int demanarMoviment(slist *list) {
+int demanarMoviment(slist *list, matriux mat) {
     int userMoveNumber = NULL;
     snode *after, *node = NULL;
 
@@ -119,5 +120,7 @@ int demanarMoviment(slist *list) {
     after = searchorderlist(list, info);
 
     node = searchnodelist(list, info, after);
+
+    menu(list, mat);
 
 }
