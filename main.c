@@ -25,8 +25,11 @@
 #include "menu.h"
 
 int main(int argc, char **argv) {
-    matriu mat;
-    
+    matriux mat;
+
+    slist list;
+    init_list(&list);
+
     int nd = NUMERO_DISCOS;
     char fileName[] = OUTPUT_FILENAME;
 
@@ -44,8 +47,8 @@ int main(int argc, char **argv) {
 
     //createFile(fileName); problemes
     //writeFileHeadboard(argv[0], nd, fileName);
-    callHanoi(nd, mat);
-    menu(mat);
+    callHanoi(nd, &list, mat);
+    menu(&list, mat);
 
     return (0);
 } // main
