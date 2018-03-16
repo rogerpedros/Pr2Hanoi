@@ -17,6 +17,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "hanoi_list.h"
+#include "hanoi_engine.h"
+
+
+void init_matriu(int nd, int nt, matriux *matriu){
+       
+    matriu->matriu_mov[nd][nt];
+}// init matriu
+
 
 /*void agregar_moviment(node* _node) {
 
