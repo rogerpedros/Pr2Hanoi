@@ -15,7 +15,11 @@
  */
 #define OUTPUT_FILENAME "output.txt"
 
+typedef struct{
+    char nom_fitxer;
+    
+}fitxer;
 //extern char fileName;
-
-void createFile(char);
-void writeFileHeadboard(char, int, char);
+void init_file(char*);
+void createFile(char*);
+void writeFileHeadboard(char*, int, char*);

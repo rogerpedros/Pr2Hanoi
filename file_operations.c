@@ -21,45 +21,46 @@
 #include "hanoi_engine.h"
 #include "utils.h"
 
-void init_file(char fileName){
-
+void init_file(char *fileName){
+    
+    //fitxer.nom_fitxer = fileName;
 }
 
-void createFile(char fileName){
-    char fileName2[] = "output.txt";
+void createFile(char *fileName) {
+    //char fileName2[] = "output.txt";
     FILE *f;
     f = fopen(fileName, "w");
-    
-    if (f == NULL){
-        printf ("No es pot crear el fitxer");
+
+    if (f == NULL) {
+        printf("No es pot crear el fitxer");
         return;
     }
-    
-    fclose (f);
+
+    fclose(f);
 }
 
-void writeFileHeadboard(char lineEntered, int nd, char fileName ){
+void writeFileHeadboard(char *lineEntered, int nd, char *fileName) {
     char fileName2[] = "output.txt";
     FILE *f;
     f = fopen(fileName, "a");
 
     char date = getHanoiDate();
-    
-    if (f == NULL){
-        printf ("No es pot crear el fitxer");
+
+    if (f == NULL) {
+        printf("No es pot crear el fitxer");
         return;
     }
 
 
-    fprintf(f,"\n========================================================================");
-    fprintf(f,"\n Command Line entered: %c \n", lineEntered);
-    fprintf(f,"\n Numero de torres: %d", NUMERO_TORRES);
-    fprintf(f,"\n Numero de discs:  %d", nd);
-    fprintf(f,"\n Output FileName:  %c", fileName);
-    fprintf(f,"\n File Operation: ap \n");
-    fprintf(f,"\n IINT Time:  %c", date);
-    fprintf(f,"\n========================================================================");
+    fprintf(f, "\n========================================================================");
+    fprintf(f, "\n Command Line entered: %c \n", lineEntered);
+    fprintf(f, "\n Numero de torres: %d", NUMERO_TORRES);
+    fprintf(f, "\n Numero de discs:  %d", nd);
+    fprintf(f, "\n Output FileName:  %c", fileName);
+    fprintf(f, "\n File Operation: ap \n");
+    fprintf(f, "\n IINT Time:  %c", date);
+    fprintf(f, "\n========================================================================");
 
-    fclose (f);
+    fclose(f);
 }
-            
+
