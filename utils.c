@@ -25,11 +25,3 @@ void flush_input() {
     char c;
     while ((c = getchar()) != '\n' && c != EOF) {}
 }
-
-char getHanoiDate() {
-    time_t t = time(NULL);
-    struct tm *tm = localtime(&t);
-    char s[64];
-    strftime(s, sizeof (s), "%c", tm); //La data esta en la s
-    return s;
-}

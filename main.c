@@ -26,20 +26,19 @@
 
 int main(int argc, char **argv) {
     matriux mat;
-    fitxer fit;
 
     slist list;
     init_list(&list);
 
     int nd = NUMERO_DISCOS;
     char fileName[] = OUTPUT_FILENAME;
-    char executionLine = NULL;
+    char executionLine[512];
 
     for (int i = 0; i < argc; ++i) {
         if(i == 0){
-          sscanf(argv[i], "%s", &executionLine);
+            sscanf(argv[i], "%s", &executionLine);
         }
-        
+
         if ( (strstr(argv[i], "-d")) && (i != 0) ){
             printf("El numero de discos entrat es:  %i \n", atoi(argv[i + 1]));
             sscanf(argv[i+1], "%d", &nd);
@@ -50,13 +49,16 @@ int main(int argc, char **argv) {
             sscanf(argv[i+1], "%s", &fileName);
         }
     }
+    printf("hola");
     
     //init_matriu(nd, 3, &mat);
-    
-    createFile(&fileName); 
+    //init_file(&fitx, &fileName);
+
+    createFile(&fileName);
     writeFileHeadboard(&executionLine, nd, &fileName);
+
     callHanoi(nd, &list, &mat);
-    menu(&list, &mat);
+    //menu(&list, &mat);
 
     return (0);
 } // main
