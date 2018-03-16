@@ -179,7 +179,6 @@ int deletelist(slist *list, sinfo *info, snode *node){
 // or when the codes are equal and the grade of i1 is
 int infocmp(sinfo i1, sinfo i2){
     int ret = 0; // they are equal unless an order is identified
-
     if(i1.move > i2.move)
         ret = 1;
     else

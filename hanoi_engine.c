@@ -121,7 +121,8 @@ int demanarMoviment(slist *list, matriux *mat) {
 
     after = searchorderlist(list, info);
 
-    node = searchnodelist(list, info, after);
+    printf("\nEn el moviment: %d. ", after->next->info.move);
+    printf("Profunditat %d. Disc %d des de la torre T%d a la torre T%d", after->next->info.recProf, after->next->info.disc, after->next->info.from, after->next->info.to);
 
     menu(list, mat);
 
