@@ -20,7 +20,7 @@
 #include "hanoi_engine.h"
 #include "utils.h"
 
-
+/*Neteja el char, per evitar conflictes amb la memoria que ja esta setejada*/
 void flush_input() {
     char c;
     while ((c = getchar()) != '\n' && c != EOF) {}

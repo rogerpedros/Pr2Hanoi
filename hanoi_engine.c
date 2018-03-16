@@ -44,7 +44,6 @@ void hanoi(int nd, int towerorg, int towerdest, int toweraux, slist *list, matri
 }// hanoi
 
 //This function indicates a move of one disk
-
 void move(int nd, int towerorg, int towerdest, int profunditat, slist *list, matriux *mat, char *fileName) {
     static int count = 0;
     count++;
@@ -71,8 +70,7 @@ void move(int nd, int towerorg, int towerdest, int profunditat, slist *list, mat
     printToFile(count, nd,towerorg, towerdest,profunditat, fileName);
 }
 
-//This function indicates a move of one disk
-
+/*Aquesta funció seteja l'informació a la llista*/
 void setToList(int movementNum, int profunditat, int nd, int towerorg, int towerdest, slist *list) {
     sinfo info;
     sinfo v[] = {
@@ -90,11 +88,13 @@ void setToList(int movementNum, int profunditat, int nd, int towerorg, int tower
     addlist(list, info, after);
 }
 
+/*Funcio inicial per iniciar el hanoi*/
 void callHanoi(int nd, slist *list, matriux *mat, char *fileName) {
     printf("\nEls moviments dels discos entre les torres de Hanoi son:\n");
     hanoi(nd, 0, 1, 2, list, mat, fileName);
 }
 
+/*En cas de que es vugui repetir el hanoi es crida aquesta funcio desde menu*/
 void repetirHanoi(slist *list, matriux *mat, char *fileName) {
     int newNd;
     printf("Entrar numero de discos: ");
@@ -103,6 +103,7 @@ void repetirHanoi(slist *list, matriux *mat, char *fileName) {
     callHanoi(newNd, list, mat, fileName);
 }
 
+/*Funcio que printa el moviment que demana l'usuari*/
 int demanarMoviment(slist *list, matriux *mat, char *fileName) {
     int userMoveNumber = NULL;
     snode *after, *node = NULL;

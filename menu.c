@@ -21,7 +21,7 @@
 #include "hanoi_list.h"
 #include "hanoi_engine.h"
 #include "utils.h"
-
+/*Llegeix la opcio pel menu*/
 int read_option(const char* msg) {
     int option = OPTION_INVALID;
     printf("%s", msg);
@@ -31,17 +31,16 @@ int read_option(const char* msg) {
 
     return option;
 }
-
+/*printa les opcions de menu*/
 int query_option() {
     printf("\n\n");
     printf( MSG_REPEAT_HANOI, OPTION_REPEAT_HANOI);
     printf(MSG_SHOW_MOVEMENT, OPTION_SHOW_MOVEMENT);
-    printf(MSG_CHANGE_OUTPUT, OPTION_CHANGE_OUTPUT);
     printf(MSG_QUIT, OPTION_QUIT);
 
     return read_option("Tria una opcio: ");
 }
-
+/*Printa i gestiona un senzill menu */
 void menu(slist *list, matriux *mat, char *fileName) {
     int option = query_option();
     while (option != OPTION_QUIT) {
@@ -54,11 +53,6 @@ void menu(slist *list, matriux *mat, char *fileName) {
             case OPTION_SHOW_MOVEMENT:
                 demanarMoviment(list, mat, fileName);
                 break;
-
-            case OPTION_CHANGE_OUTPUT:
-                
-                break;
-
             default:
                 printf("\nInvalid option. Try again...\n\n");
                 break;

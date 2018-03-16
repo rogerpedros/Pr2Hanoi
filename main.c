@@ -23,7 +23,8 @@
 #include "hanoi_engine.h"
 #include "file_operations.h"
 #include "menu.h"
-
+/*En main, declarem i inicialitzem la matriu i la llista. Controlem la entrada de arguments. Cridem els metodes necesaris per la creacio del fitxer.
+ * Inicem el Hanoi i mostrem el menu*/
 int main(int argc, char **argv) {
     matriux mat;
 

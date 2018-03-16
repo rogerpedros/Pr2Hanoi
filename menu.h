@@ -25,8 +25,6 @@
 #define OPTION_REPEAT_HANOI 1
 #define MSG_SHOW_MOVEMENT "%d. Show Movement\n"
 #define OPTION_SHOW_MOVEMENT 2
-#define MSG_CHANGE_OUTPUT "%d. Change Output\n"
-#define OPTION_CHANGE_OUTPUT 3
 #define OPTION_INVALID -1
 
 

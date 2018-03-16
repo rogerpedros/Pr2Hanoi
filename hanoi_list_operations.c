@@ -1,13 +1,17 @@
-/* Estructures de Dades i Algorismes I 
- * Examples on Dynamic linked lists
- * 
- * Files ExamplesLists.h ExamplesLists.c ExamplesLists-lib.c
- * File: ExamplesLists-lib.c* 
- * 
- * This file contains the library of functions of the dynamic linked lists 
- * 
- * Prepared by: Dolors Sala
- * Date: February 2017
+/*
+ *  Grup de Practiques: P401
+ * Professor practiques: Angel David Blanco Casales
+ * Incidencies:
+ *
+ * Autor (Nom i NIA): Carlos Hortensius Fernandez 205437
+ * Roger Pedros Villalba 206798
+ * Marc Gaja Pescador 204885
+ * Data/hora:
+ * Collaboradors (si cal):
+ *
+ * Us del programa:
+ * Estat de l'entrega:
+ * Altres comentaris o incidencies:
  */
 
 #include <memory.h>

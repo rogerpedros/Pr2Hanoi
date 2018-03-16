@@ -22,6 +22,7 @@
 #include "hanoi_engine.h"
 #include "utils.h"
 
+/*Aquesta funció crea el fitxer*/
 void createFile(char *fileName) {
     //char fileName2[] = "../eutput.txt";
     FILE *f;
@@ -34,7 +35,7 @@ void createFile(char *fileName) {
 
     fclose(f);
 }
-
+/*Printa la cabecera inicial del fitxer*/
 void writeFileHeadboard(char *lineEntered, int nd, char *fileName) {
     //char fileName2[] = "output.txt";
     FILE *f;
@@ -60,6 +61,7 @@ void writeFileHeadboard(char *lineEntered, int nd, char *fileName) {
     fclose(f);
 }
 
+/*Printa cada moviment al txt*/
 void printToFile(int move, int nd, int towerorg, int towerdest, int profunditat, char* fileName) {
     FILE *f;
     f = fopen(fileName, "a");
@@ -72,6 +74,7 @@ void printToFile(int move, int nd, int towerorg, int towerdest, int profunditat,
 
 }
 
+/*Printa la matriu que va seguida de la cabecera. DONA PROBLEMES EN LA ITERACIÓ DE LA MATRIU*/
 void preMatriu(int nd, int torres, matriux matriu) {
 
     int comptador = nd - 1;
@@ -93,6 +96,7 @@ void preMatriu(int nd, int torres, matriux matriu) {
     printf("          _ _ __\n");
 }
 
+/*Funcions per generar dinamicament les torres*/
 void imprimirPuntos(int i, FILE *f){
     int j = 0;
     for (j = 0; j<i; j++){
@@ -118,7 +122,7 @@ void imprimirLinea(int i, FILE *f){
     fprintf(f, "  ");
 
 }
-
+/*Funciono per generar graficament les torres. Aquesta funció utilitza les 3 funcions anterios. PROBLEES D'ITERACIO DE MATRIU */
 void imprimirGraficament(char *fileName, matriux *mat){
     FILE *f;
     f = fopen(fileName, "a");

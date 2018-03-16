@@ -27,7 +27,7 @@
 #define FAIL   FALSE
 
 typedef struct{
-    int matriu_mov[][3];
+    int matriu_mov[3][3];
 }matriux;
 
 typedef struct {
