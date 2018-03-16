@@ -18,6 +18,7 @@
 #include <string.h>
 #include "hanoi_engine.h"
 #include "hanoi_list.h"
+#include "file_operations.h"
 #include "menu.h"
 
 // Recursive function to move nd disks from the origin tower towerorg, to
@@ -25,26 +26,26 @@
 // it doesn't return anything and instead it prints information of the move of
 // the disks to display
 
-void hanoi(int nd, int towerorg, int towerdest, int toweraux, slist *list, matriux *mat) {
+void hanoi(int nd, int towerorg, int towerdest, int toweraux, slist *list, matriux *mat, char *fileName) {
     static int depth = 0;
     depth++;
 
     if (nd == 1) {
-        move(nd, towerorg, towerdest, depth, list, mat);
+        move(nd, towerorg, towerdest, depth, list, mat, fileName);
         depth--;
         return;
     }
 
-    hanoi(nd - 1, towerorg, toweraux, towerdest, list, mat);
-    move(nd, towerorg, towerdest, depth, list, mat);
-    hanoi(nd - 1, toweraux, towerdest, towerorg, list, mat);
+    hanoi(nd - 1, towerorg, toweraux, towerdest, list, mat, fileName);
+    move(nd, towerorg, towerdest, depth, list, mat, fileName);
+    hanoi(nd - 1, toweraux, towerdest, towerorg, list, mat, fileName);
     depth--;
 
 }// hanoi
 
 //This function indicates a move of one disk
 
-void move(int nd, int towerorg, int towerdest, int profunditat, slist *list, matriux *mat) {
+void move(int nd, int towerorg, int towerdest, int profunditat, slist *list, matriux *mat, char *fileName) {
     static int count = 0;
     count++;
 
@@ -57,21 +58,17 @@ void move(int nd, int towerorg, int towerdest, int profunditat, slist *list, mat
     while (mat->matriu_mov[i][towerorg] == 0) {
         i++;
     }
-
     aux = mat->matriu_mov[i][towerorg];
     mat->matriu_mov[i][towerorg] = 0;
 
     i = 0;
-
     while (mat->matriu_mov[i][towerdest] == 0) {
         i++;
     }
-
     mat->matriu_mov[i - 1][towerdest] = aux;
 
-
     setToList(count, profunditat, nd, towerorg, towerdest, list);
-    //printToFile();
+    printToFile(count, nd,towerorg, towerdest,profunditat, fileName);
 }
 
 //This function indicates a move of one disk
@@ -88,26 +85,25 @@ void setToList(int movementNum, int profunditat, int nd, int towerorg, int tower
     snode *after, *node = NULL;
     int found;
 
-
     info = get_element(v, 0);
     after = searchorderlist(list, info);
     addlist(list, info, after);
 }
 
-void callHanoi(int nd, slist *list, matriux *mat) {
+void callHanoi(int nd, slist *list, matriux *mat, char *fileName) {
     printf("\nEls moviments dels discos entre les torres de Hanoi son:\n");
-    hanoi(nd, 0, 1, 2, list, mat);
+    hanoi(nd, 0, 1, 2, list, mat, fileName);
 }
 
-void repetirHanoi(slist *list, matriux *mat) {
+void repetirHanoi(slist *list, matriux *mat, char *fileName) {
     int newNd;
     printf("Entrar numero de discos: ");
     scanf("%d", &newNd);
 
-    callHanoi(newNd, list, mat);
+    callHanoi(newNd, list, mat, fileName);
 }
 
-int demanarMoviment(slist *list, matriux *mat) {
+int demanarMoviment(slist *list, matriux *mat, char *fileName) {
     int userMoveNumber = NULL;
     snode *after, *node = NULL;
 
@@ -124,6 +120,6 @@ int demanarMoviment(slist *list, matriux *mat) {
     printf("\nEn el moviment: %d. ", after->next->info.move);
     printf("Profunditat %d. Disc %d des de la torre T%d a la torre T%d", after->next->info.recProf, after->next->info.disc, after->next->info.from, after->next->info.to);
 
-    menu(list, mat);
+    menu(list, mat, fileName);
 
 }

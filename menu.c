@@ -42,17 +42,17 @@ int query_option() {
     return read_option("Tria una opcio: ");
 }
 
-void menu(slist *list, matriux *mat) {
+void menu(slist *list, matriux *mat, char *fileName) {
     int option = query_option();
     while (option != OPTION_QUIT) {
 
         switch (option) {
             case OPTION_REPEAT_HANOI:
-                repetirHanoi(list, mat);
+                repetirHanoi(list, mat, fileName);
                 break;
 
             case OPTION_SHOW_MOVEMENT:
-                demanarMoviment(list, mat);
+                demanarMoviment(list, mat, fileName);
                 break;
 
             case OPTION_CHANGE_OUTPUT:

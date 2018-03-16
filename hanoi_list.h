@@ -27,10 +27,7 @@
 #define FAIL   FALSE
 
 typedef struct{
-    int matriu_mov[3][3];
-    int num_discos;
-    int num_torres;
-    int movimiento;
+    int matriu_mov[][3];
 }matriux;
 
 typedef struct {

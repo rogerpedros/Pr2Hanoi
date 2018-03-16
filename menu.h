@@ -30,7 +30,7 @@
 #define OPTION_INVALID -1
 
 
-void menu(slist*, matriux *mat);
+void menu(slist*, matriux *mat, char *fileName);
 
 #endif /* MENU_H */
 

@@ -28,7 +28,7 @@ void createFile(char *fileName) {
     f = fopen(fileName, "w");
 
     if (f == NULL) {
-        printf("No es pot crear el fitxer");
+        printf("El fitxer ja existeix o no es pot crear");
         return;
     }
 
@@ -44,15 +44,15 @@ void writeFileHeadboard(char *lineEntered, int nd, char *fileName) {
     time(&curtime);
 
     if (f == NULL) {
-        printf("No es pot crear el fitxer");
+        printf("El fitxer ja existeix o no es pot crear");
         return;
     }
 
     fprintf(f, "\n========================================================================");
-    fprintf(f, "\n Command Line entered: %c \n", (unsigned char) lineEntered);
+    fprintf(f, "\n Command Line entered: %s \n", lineEntered);
     fprintf(f, "\n Numero de torres: %d", NUMERO_TORRES);
     fprintf(f, "\n Numero de discs:  %d", nd);
-    fprintf(f, "\n Output FileName:  %c",  fileName);
+    fprintf(f, "\n Output FileName:  %s",  fileName);
     fprintf(f, "\n File Operation: ap \n");
     fprintf(f, "\n INIT Time:  %s", ctime(&curtime));
     fprintf(f, "\n========================================================================");
@@ -60,6 +60,38 @@ void writeFileHeadboard(char *lineEntered, int nd, char *fileName) {
     fclose(f);
 }
 
+void printToFile(int move, int nd, int towerorg, int towerdest, int profunditat, char* fileName) {
+    FILE *f;
+    f = fopen(fileName, "a");
+
+    fprintf(f, "\nMoviment: %d Profunditat %d. Disc %d des de la torre T%d a la torre T%d", move, profunditat, nd, towerorg, towerdest);
+    fclose(f);
+
+    //imprimirGraficament(fileName, ); PROBLEMES
+    //preMatriu(nd, 3,); PROBLEMES
+
+}
+
+void preMatriu(int nd, int torres, matriux matriu) {
+
+    int comptador = nd - 1;
+    printf("Hanoi Tower State Matrix ----  \n");
+    int i, j;
+    for (i = 0; i < nd; i++) {
+        printf("High %d |", comptador);
+        for (j = 0; j < torres; j++) {
+            if (j == 0) {
+                //matriu[i][j] = i + 1;PROBLEMES
+            } else {
+               //matriu[i][j] = 0;PROBLEMES
+            }
+            //printf("%d ", //matriu[i][j]); PROBLEMES
+        }
+        printf("\n");
+        comptador--;
+    }
+    printf("          _ _ __\n");
+}
 
 void imprimirPuntos(int i, FILE *f){
     int j = 0;
@@ -87,19 +119,20 @@ void imprimirLinea(int i, FILE *f){
 
 }
 
+void imprimirGraficament(char *fileName, matriux *mat){
+    FILE *f;
+    f = fopen(fileName, "a");
 
-//imprimirhanoi(FILE *f, int **matriu){
-//
-//    int comptador = NUMERO_DISCOS - 1;
-//    int i, j;
-//    for (i = 0; i < NUMERO_DISCOS; i++) {
-//        printf("H %d |", comptador);
-//        for (j = 0; j < NUMERO_TORRES; j++) {
-//            imprimirHanoi(f, matriu[i][j]);
-//        }
-//        printf("\n");
-//        comptador--;
-//    }
-//    fprintf(f, "   ------------------------------------------------\n\n");
-//}
+    int comptador = NUMERO_DISCOS - 1;
+    int i, j;
+    for (i = 0; i < NUMERO_DISCOS; i++) {
+        printf("H %d |", comptador);
+        for (j = 0; j < NUMERO_TORRES; j++) {
+            //imprimirLinea(mat[i][j], f); PROBLEMES
+        }
+        printf("\n");
+        comptador--;
+    }
+    fprintf(f, "--------------------------------------------------\n\n");
+}
 

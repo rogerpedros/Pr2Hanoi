@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
     init_list(&list);
 
     int nd = NUMERO_DISCOS;
-    char fileName[] = OUTPUT_FILENAME;
+    char fileName[50] = OUTPUT_FILENAME;
     char executionLine[512];
 
     for (int i = 0; i < argc; ++i) {
@@ -49,16 +49,13 @@ int main(int argc, char **argv) {
             sscanf(argv[i+1], "%s", &fileName);
         }
     }
-    printf("hola");
-    
-    //init_matriu(nd, 3, &mat);
-    //init_file(&fitx, &fileName);
+    init_matriu(nd, NUMERO_TORRES , &mat);
 
     createFile(&fileName);
     writeFileHeadboard(&executionLine, nd, &fileName);
 
-    callHanoi(nd, &list, &mat);
-    //menu(&list, &mat);
+    callHanoi(nd, &list, &mat, &fileName);
+    menu(&list, &mat, &fileName);
 
     return (0);
 } // main

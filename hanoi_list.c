@@ -20,6 +20,6 @@
 #include "hanoi_engine.h"
 
 
-void init_matriu(int nd, int nt, matriux *matriu){
-    matriu->matriu_mov[nd][nt];
+void init_matriu(int nd, int nt, matriux *mat){
+    mat->matriu_mov[nd][nt];
 }// init matriu

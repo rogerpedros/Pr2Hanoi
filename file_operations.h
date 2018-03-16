@@ -19,7 +19,9 @@
 void createFile(char*);
 void writeFileHeadboard(char*, int, char*);
 
+void printToFile(int,int, int, int, int, char*);
+
 void imprimirPuntos(int , FILE*);
 void imprimirDiscos(int, FILE*);
 void imprimirLinea(int, FILE*);
-void imprmirhanoi(FILE*, int);
+void imprmirhanoi(char *, int);
