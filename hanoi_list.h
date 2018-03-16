@@ -75,5 +75,11 @@ int searchnodelist(slist *list, sinfo info, snode **nod);
 void print_info(sinfo info, FILE *fdbg);
 void print_list(slist list, FILE *fdbg);
 
+void init_matriu(int, int, matriux*);
+void imprimirPuntos(int , FILE*);
+void imprimirDiscos(int, FILE*);
+void imprimirLinea(int, FILE*);
+void imprmirhanoi(FILE*, int);
+
 
 #endif HANOI_LIST__

@@ -24,6 +24,49 @@ void init_matriu(int nd, int nt, matriux *matriu){
     matriu->matriu_mov[nd][nt];
 }// init matriu
 
+void imprimirPuntos(int i, FILE *f){
+    int j = 0;
+    for (j = 0; j<i; j++){
+        fprintf(f, ".");
+    }
+}
+
+void imprimirDiscos(int i, FILE *f){
+    int j = 0;
+    for (j = 0; j<i; j++){
+        fprintf(f, "-");
+    }
+}
+
+void imprimirLinea(int i, FILE *f){
+    
+    int nd = NUMERO_DISCOS;
+    
+    imprimirPunts(nd - i, f);
+    imprimirDiscos(i, f);
+    fprintf(f, "|");
+    imprimirDiscsos(i, f);
+    imprimirPunts(nd - 1, f);
+    fprintf(f, "  ");
+    
+}
+
+imprimirhanoi(FILE *f, int **matriu){
+    
+    int comptador = NUMERO_DISCOS - 1;
+    int i, j;
+    for (i = 0; i < NUMERO_DISCOS; i++) {
+        printf("H %d |", comptador);
+        for (j = 0; j < NUMERO_TORRES; j++) {
+            imprimirHanoi(f, matriu[i][j]);
+        }
+        printf("\n");
+        comptador--;
+    }
+    fprintf(f, "   ------------------------------------------------\n\n");
+}
+
+
 
 /*void agregar_moviment(node* _node) {
 
