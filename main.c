@@ -44,11 +44,13 @@ int main(int argc, char **argv) {
             sscanf(argv[i+1], "%p", &fileName);
         }
     }
-
+    
+    init_matriu(nd, 3, &mat);
+    
     //createFile(fileName); problemes
     //writeFileHeadboard(argv[0], nd, fileName);
-    callHanoi(nd, &list, mat);
-    menu(&list, mat);
+    callHanoi(nd, &list, &mat);
+    menu(&list, &mat);
 
     return (0);
 } // main
