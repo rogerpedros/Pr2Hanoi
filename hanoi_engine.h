@@ -24,7 +24,7 @@ void setToList(int, int, int, int, int, slist*);
 void callHanoi(int, slist*, matriux );
 void repetirHanoi(slist*, matriux );
 
-int demanarMoviment(int, slist*);
+int demanarMoviment(slist*);
 
 
 #endif //PR2HANOI_HANOI_ENGINE_H

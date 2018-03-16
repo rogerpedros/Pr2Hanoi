@@ -178,21 +178,14 @@ int deletelist(slist *list, sinfo *info, snode *node){
 // the code of i2 is greater than the code of i2
 // or when the codes are equal and the grade of i1 is
 int infocmp(sinfo i1, sinfo i2){
-//    int ret = 0; // they are equal unless an order is identified
-//
-//    if(i1.code > i2.code)
-//        ret = 1;
-//    else
-//    if(i1.code < i2.code)
-//        ret = -1;
-//    else
-//    if(i1.grade > i2.grade)
-//        ret = 1;
-//    else
-//    if(i1.grade < i2.grade)
-//        ret = -1;
-//
-//    return(ret);
+    int ret = 0; // they are equal unless an order is identified
+
+    if(i1.move > i2.move)
+        ret = 1;
+    else
+    if(i1.move < i2.move)
+        ret = -1;
+    return(ret);
 } // infocmp
 
 // it returns the pointer to the node where to add (after) a new element in 

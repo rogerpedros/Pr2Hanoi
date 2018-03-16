@@ -52,7 +52,7 @@ void menu(slist *list, matriux mat) {
                 break;
 
             case OPTION_SHOW_MOVEMENT:
-               
+                demanarMoviment(list);
                 break;
 
             case  OPTION_CHANGE_OUTPUT:

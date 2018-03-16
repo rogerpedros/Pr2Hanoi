@@ -105,9 +105,19 @@ void repetirHanoi(slist *list, matriux mat) {
     callHanoi(newNd, list, mat);
 }
 
-int demanarMoviment(int moveNumer, slist *list) {
+int demanarMoviment(slist *list) {
     int userMoveNumber = NULL;
+    snode *after, *node = NULL;
 
     printf("Introdueix el moviment que vols visualitzar;\n");
-    scanf("%d", userMoveNumber);
+    scanf("%d", &userMoveNumber);
+
+    sinfo info;
+    sinfo v[] = {{userMoveNumber, 0, 0, 0, 0}};
+    info = get_element(v, 0);
+
+    after = searchorderlist(list, info);
+
+    node = searchnodelist(list, info, after);
+
 }
