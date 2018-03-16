@@ -17,14 +17,14 @@
 #define CINQUE_DISC ".-----|-----."
 #define SISE_DISC "------|------"
 
-void hanoi(int, int, int, int, slist*, matriux );
-void move(int, int, int, int, slist*, matriux );
+void hanoi(int, int, int, int, slist*, matriux* );
+void move(int, int, int, int, slist*, matriux* );
 void setToList(int, int, int, int, int, slist*);
 
-void callHanoi(int, slist*, matriux );
-void repetirHanoi(slist*, matriux );
+void callHanoi(int, slist*, matriux* );
+void repetirHanoi(slist*, matriux* );
 
-int demanarMoviment(slist*, matriux);
+int demanarMoviment(slist*, matriux*);
 
 
 #endif //PR2HANOI_HANOI_ENGINE_H

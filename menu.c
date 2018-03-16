@@ -42,7 +42,7 @@ int query_option() {
     return read_option("Tria una opcio: ");
 }
 
-void menu(slist *list, matriux mat) {
+void menu(slist *list, matriux *mat) {
     int option = query_option();
     while (option != OPTION_QUIT) {
 

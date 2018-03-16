@@ -25,7 +25,7 @@
 // it doesn't return anything and instead it prints information of the move of
 // the disks to display
 
-void hanoi(int nd, int towerorg, int towerdest, int toweraux, slist *list, matriux mat) {
+void hanoi(int nd, int towerorg, int towerdest, int toweraux, slist *list, matriux *mat) {
     static int depth = 0;
     depth++;
 
@@ -44,7 +44,7 @@ void hanoi(int nd, int towerorg, int towerdest, int toweraux, slist *list, matri
 
 //This function indicates a move of one disk
 
-void move(int nd, int towerorg, int towerdest, int profunditat, slist *list, matriux mat) {
+void move(int nd, int towerorg, int towerdest, int profunditat, slist *list, matriux *mat) {
     static int count = 0;
     count++;
 
@@ -54,20 +54,20 @@ void move(int nd, int towerorg, int towerdest, int profunditat, slist *list, mat
     int i = 0; //Matriu de moviments
     int aux = 0;
 
-//    while (mat.matriu_mov[i][towerorg] == 0) {
-//        i++;
-//    }
-//
-//    aux = mat.matriu_mov[i][towerorg];
-//    mat.matriu_mov[i][towerorg] = 0;
-//
-//    i = 0;
-//
-//    while (mat.matriu_mov[i][towerdest] == 0) {
-//        i++;
-//    }
-//
-//    mat.matriu_mov[i - 1][towerdest] = aux;
+    while (mat->matriu_mov[i][towerorg] == 0) {
+        i++;
+    }
+
+    aux = mat->matriu_mov[i][towerorg];
+    mat->matriu_mov[i][towerorg] = 0;
+
+    i = 0;
+
+    while (mat->matriu_mov[i][towerdest] == 0) {
+        i++;
+    }
+
+    mat->matriu_mov[i - 1][towerdest] = aux;
 
 
     setToList(count, profunditat, nd, towerorg, towerdest, list);
@@ -78,9 +78,10 @@ void move(int nd, int towerorg, int towerdest, int profunditat, slist *list, mat
 
 void setToList(int movementNum, int profunditat, int nd, int towerorg, int towerdest, slist *list) {
     sinfo info;
-    sinfo v[] = {{movementNum, profunditat, nd, towerorg, towerdest}};
+    sinfo v[] = {
+        {movementNum, profunditat, nd, towerorg, towerdest}};
 
-    int dim = sizeof(v) / sizeof(sinfo);
+    int dim = sizeof (v) / sizeof (sinfo);
 
     // list operations
     int i, j;
@@ -93,12 +94,12 @@ void setToList(int movementNum, int profunditat, int nd, int towerorg, int tower
     addlist(list, info, after);
 }
 
-void callHanoi(int nd, slist *list, matriux mat) {
+void callHanoi(int nd, slist *list, matriux *mat) {
     printf("\nEls moviments dels discos entre les torres de Hanoi son:\n");
     hanoi(nd, 0, 1, 2, list, mat);
 }
 
-void repetirHanoi(slist *list, matriux mat) {
+void repetirHanoi(slist *list, matriux *mat) {
     int newNd;
     printf("Entrar numero de discos: ");
     scanf("%d", &newNd);
@@ -106,7 +107,7 @@ void repetirHanoi(slist *list, matriux mat) {
     callHanoi(newNd, list, mat);
 }
 
-int demanarMoviment(slist *list, matriux mat) {
+int demanarMoviment(slist *list, matriux *mat) {
     int userMoveNumber = NULL;
     snode *after, *node = NULL;
 
@@ -114,7 +115,8 @@ int demanarMoviment(slist *list, matriux mat) {
     scanf("%d", &userMoveNumber);
 
     sinfo info;
-    sinfo v[] = {{userMoveNumber, 0, 0, 0, 0}};
+    sinfo v[] = {
+        {userMoveNumber, 0, 0, 0, 0}};
     info = get_element(v, 0);
 
     after = searchorderlist(list, info);

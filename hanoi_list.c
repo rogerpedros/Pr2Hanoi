@@ -21,7 +21,6 @@
 
 
 void init_matriu(int nd, int nt, matriux *matriu){
-       
     matriu->matriu_mov[nd][nt];
 }// init matriu
 
